@@ -3,7 +3,7 @@ import SwiftUI
 /// Right-click Partition > "Resize Partition (data size)..."
 struct ResizePartitionSheet: View {
     @EnvironmentObject var app: AppState
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var presentationMode
     let partitionIndex: Int
 
     @State private var sizeText: String = ""
@@ -29,7 +29,7 @@ struct ResizePartitionSheet: View {
 
             HStack {
                 Spacer()
-                Button("Cancel") { dismiss() }
+                Button("Cancel") { presentationMode.wrappedValue.dismiss() }
                 Button("Resize") { apply() }.keyboardShortcut(.defaultAction)
             }
         }
@@ -40,7 +40,7 @@ struct ResizePartitionSheet: View {
 
     private func apply() {
         guard let value = parseSize(sizeText) else { return }
-        dismiss()
+        presentationMode.wrappedValue.dismiss()
         app.resizePartition(index: partitionIndex, newDataSize: value)
     }
 
@@ -54,7 +54,7 @@ struct ResizePartitionSheet: View {
 /// WII DISC > "Import Partition..."
 struct ImportPartitionSheet: View {
     @EnvironmentObject var app: AppState
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var presentationMode
     let initialTableIndex: Int
     let initialOffset: UInt64
 
@@ -94,7 +94,7 @@ struct ImportPartitionSheet: View {
 
             HStack {
                 Spacer()
-                Button("Cancel") { dismiss() }
+                Button("Cancel") { presentationMode.wrappedValue.dismiss() }
                 Button("Import") { apply() }.keyboardShortcut(.defaultAction)
                     .disabled(blobURL == nil)
             }
@@ -112,7 +112,7 @@ struct ImportPartitionSheet: View {
         let trimmed = offsetText.trimmingCharacters(in: .whitespaces)
         let offset: UInt64? = trimmed.lowercased().hasPrefix("0x") ? UInt64(trimmed.dropFirst(2), radix: 16) : UInt64(trimmed)
         guard let offset else { return }
-        dismiss()
+        presentationMode.wrappedValue.dismiss()
         app.importPartition(blobURL: blobURL, atOffset: offset, tableIndex: tableIndex, kind: kind)
     }
 }

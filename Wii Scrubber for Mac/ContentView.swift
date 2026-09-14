@@ -39,7 +39,7 @@ struct ContentView: View {
                     .environmentObject(app)
             }
         }
-        .onChange(of: pendingReplace) { _, newValue in
+        .onChange(of: pendingReplace) { newValue in
             guard let node = newValue else { return }
             PanelPresenter.openFile(configure: { $0.message = "Choose the replacement file for \"\(node.name)\"" }) { url in
                 if let url { app.replace(node: node, withDataAt: url) }
