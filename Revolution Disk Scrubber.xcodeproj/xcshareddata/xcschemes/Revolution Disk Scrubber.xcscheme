@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "000000000000000100000000"
-               BuildableName = "Wii Scrubber.app"
-               ReferencedContainer = "container:Wii Scrubber for Mac.xcodeproj">
+               BuildableName = "Revolution Disk Scrubber.app"
+               ReferencedContainer = "container:Revolution Disk Scrubber.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "000000000000000100000000"
-            BuildableName = "Wii Scrubber.app"
-            ReferencedContainer = "container:Wii Scrubber for Mac.xcodeproj">
+            BuildableName = "Revolution Disk Scrubber.app"
+            ReferencedContainer = "container:Revolution Disk Scrubber.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "000000000000000100000000"
-            BuildableName = "Wii Scrubber.app"
-            ReferencedContainer = "container:Wii Scrubber for Mac.xcodeproj">
+            BuildableName = "Revolution Disk Scrubber.app"
+            ReferencedContainer = "container:Revolution Disk Scrubber.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

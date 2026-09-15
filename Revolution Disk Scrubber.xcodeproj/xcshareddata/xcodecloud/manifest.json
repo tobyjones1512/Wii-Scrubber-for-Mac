@@ -3,6 +3,10 @@
   "targets" : [
     {
       "id" : "8403e189-c43b-424c-add2-c07e086b5cd9",
+      "name" : "Revolution Disk Scrubber"
+    },
+    {
+      "id" : "8403e189-c43b-424c-add2-c07e086b5cd9",
       "name" : "Wii Scrubber for Mac"
     }
   ]

@@ -56,12 +56,12 @@ nonisolated enum WiiCrypto {
 
     /// Real Wii IOS versions before the "Trucha bug" fix never actually verified the RSA
     /// signature bytes on a ticket/TMD -- they only checked whether the SHA-1 hash of the signed
-    /// body happened to start with a 0x00 byte. WiiScrubber (and every other homebrew signing
+    /// body happened to start with a 0x00 byte. RevolutionDiskScrubber (and every other homebrew signing
     /// tool of that era) exploited this by brute-forcing a spare padding field inside the signed
     /// region until that condition held, then left the actual signature bytes as garbage/zero.
     ///
     /// This does nothing to real, unmodified discs (their signatures are already valid); it only
-    /// matters once WiiScrubber has modified a ticket/TMD's signed contents (e.g. after replacing
+    /// matters once RevolutionDiskScrubber has modified a ticket/TMD's signed contents (e.g. after replacing
     /// a file, shrinking a partition, or 0-filling padding under TRUCHA mode) and needs the result
     /// to still boot on real/patched IOS.
     ///

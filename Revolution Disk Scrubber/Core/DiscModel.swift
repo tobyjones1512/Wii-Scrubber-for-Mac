@@ -39,7 +39,7 @@ nonisolated struct PartitionTableEntry {
     var kind: PartitionKind
 }
 
-/// The fields WiiScrubber itself reads out of a partition header (right after the ticket).
+/// The fields RevolutionDiskScrubber itself reads out of a partition header (right after the ticket).
 nonisolated struct PartitionHeaderInfo {
     var tmdSize: UInt32
     var tmdOffset: UInt64
@@ -107,7 +107,7 @@ nonisolated final class DiscNode: Identifiable, Hashable {
 
     /// "-ve means system file" per the original tool: ticket.bin/tmd.bin/cert.bin/h3.bin and
     /// boot.bin/bi2.bin/apploader.img/fst.bin aren't real FST entries, so we hand back a negative
-    /// pseudo-index for display purposes exactly like WiiScrubber does.
+    /// pseudo-index for display purposes exactly like RevolutionDiskScrubber does.
     var displayFSTIndex: Int {
         fstIndex ?? -1
     }

@@ -3,7 +3,7 @@ import Combine
 
 /// Holds the AES "common key" (and the Korean "kkey") used to decrypt Wii partition title keys.
 ///
-/// Exactly like the original WiiScrubber, this app does NOT embed the key: you supply your own
+/// Exactly like the original RevolutionDiskScrubber, this app does NOT embed the key: you supply your own
 /// `key.bin` (16 raw bytes) and, optionally, `kkey.bin` for Korean discs, via File > Load Keys.
 /// Nothing is downloaded or guessed.
 ///

@@ -1,6 +1,6 @@
 {
-    "sweetpad.build.xcodeWorkspacePath": "Wii Scrubber for Mac.xcodeproj/project.xcworkspace",
-    "sweetpad.build.scheme": "Wii Scrubber for Mac",
+    "sweetpad.build.xcodeWorkspacePath": "Revolution Disk Scrubber.xcodeproj/project.xcworkspace",
+    "sweetpad.build.scheme": "Revolution Disk Scrubber",
     "sweetpad.build.destination": {
         "id": "macos-My Mac",
         "type": "macOS"

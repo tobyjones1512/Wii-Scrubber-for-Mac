@@ -40,7 +40,7 @@ nonisolated enum ClusterCrypto {
     }
 
     /// Write `data` at `streamOffset` into a partition's data area. The 0x400-byte hash block of
-    /// every touched cluster is left byte-for-byte as it already was on disk (WiiScrubber-style
+    /// every touched cluster is left byte-for-byte as it already was on disk (RevolutionDiskScrubber-style
     /// tools never recompute the H0-H3 hash tree; they instead rely on `WiiCrypto.truchaSign` so
     /// IOS skips verifying it), which conveniently also means the per-cluster IV does not change.
     static func write(file: RandomAccessFile, partitionDataOffset: UInt64, titleKey: [UInt8],

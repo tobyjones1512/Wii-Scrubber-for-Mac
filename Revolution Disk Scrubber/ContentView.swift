@@ -51,7 +51,7 @@ struct ContentView: View {
         } message: {
             Text(app.errorMessage ?? "")
         }
-        .navigationTitle(app.discURL?.lastPathComponent ?? "Wii Scrubber")
+        .navigationTitle(app.discURL?.lastPathComponent ?? "Revolution Disk Scrubber")
     }
 
     private var infoBar: some View {

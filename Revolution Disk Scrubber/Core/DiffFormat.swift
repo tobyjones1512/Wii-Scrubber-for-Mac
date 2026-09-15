@@ -3,7 +3,7 @@ import Foundation
 /// A simple, self-contained "what did scrubbing change" diff format used by this app's own
 /// scrub/unscrub round trip: a sequence of (offset, original bytes) records.
 ///
-/// Note this is NOT byte-compatible with the original Windows WiiScrubber's proprietary .dif
+/// Note this is NOT byte-compatible with the original Windows RevolutionDiskScrubber's proprietary .dif
 /// files -- there's no published spec for that format, only the compiled .exe. Diff files
 /// produced by *this* app's "Clean and Save" can always be used to "Unscrub" an image *this app*
 /// scrubbed.
@@ -41,7 +41,7 @@ nonisolated enum DiffFile {
         let handle = try FileHandle(forReadingFrom: url)
         defer { try? handle.close() }
         guard let magicData = try handle.read(upToCount: 4), String(data: magicData, encoding: .ascii) == magic else {
-            throw WSError.badStructure("Not a WiiScrubber-for-Mac diff file.")
+            throw WSError.badStructure("Not a RevolutionDiskScrubber-for-Mac diff file.")
         }
         _ = try handle.read(upToCount: 4) // version
         guard let sizeData = try handle.read(upToCount: 8) else { throw WSError.badStructure("Truncated diff file.") }

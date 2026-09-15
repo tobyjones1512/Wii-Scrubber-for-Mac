@@ -5,7 +5,7 @@ import Combine
 /// Central app state driving the UI: the currently opened disc, the log panel (bottom window in
 /// the original tool), and busy/progress tracking for long-running operations. All mutation of the
 /// opened disc image happens in place on the file the user opened via Open ISO, exactly like the
-/// original WiiScrubber.
+/// original RevolutionDiskScrubber.
 @MainActor
 final class AppState: ObservableObject {
     @Published var discURL: URL?
@@ -14,7 +14,7 @@ final class AppState: ObservableObject {
     @Published var rootNode: DiscNode?
 
     @Published var selection: DiscNode?
-    @Published var logLines: [String] = ["Wii Scrubber -- open an ISO to begin."]
+    @Published var logLines: [String] = ["Revolution Disk Scrubber -- open an ISO to begin."]
     @Published var isBusy = false
     @Published var progress: Double = 0
     @Published var progressLabel = ""
